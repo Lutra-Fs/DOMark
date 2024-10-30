@@ -1,0 +1,30 @@
+{
+  "manifest_version": 2,
+  "name": "DOM to Markdown Converter",
+  "version": "1.0",
+  "description": "A cross-browser extension that captures the full DOM of the current page and sends it to the Ollama API using the Reader-LM model for conversion to Markdown.",
+  "permissions": [
+    "activeTab",
+    "tabs",
+    "http://*/*",
+    "https://*/*"
+  ],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "browser_action": {
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    },
+    "default_popup": "popup.html"
+  }
+}
