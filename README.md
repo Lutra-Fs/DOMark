@@ -1,4 +1,4 @@
-# DOM to Markdown Converter Extension
+# DOMark
 
 This repository contains a cross-browser extension that captures the full DOM of the current page and sends it to the Ollama API using the Reader-LM model for conversion to Markdown. The extension also allows you to download the response Markdown file.
 
